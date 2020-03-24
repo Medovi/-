@@ -18,7 +18,7 @@ public: // Модификатор открытого доступа, так ка
 	string GetName();
 	void SetColor(string color_);
 	string GetColor();
-	bool SetSize(int size_);
+	bool SetSize(int size_); // Тип данных bool для использования в дальнейшем false и true
 	int GetSize();
 };
 
