@@ -6,9 +6,9 @@ int main() {
     string name_, color_;
     int size_;
 
-	Product p;
+	Product p; // Добавление нового объекта p для конструктора "без параметров", в данном случае Product выступает в качестве пользовательского типа данных
 	cout << "Dannie producta: " << endl;
-	p.print();
+	p.print(); // Вызов метода print с объектом p
 	cout << "\nVvedite novie dannie producta:"<<endl;
 	cout << "Nazvanie producta: ";
 	cin >> name_;
@@ -21,11 +21,11 @@ int main() {
 	p.SetSize(size_);
 	cout << "\nNovie dannie producta: " << endl;
 	cout << "Nazvanie producta: " << p.GetName() << "\nCvet producta: " << p.GetColor() << "\nKolichestvo producta: " << p.GetSize() << endl;
-	Product p2("Karandash","Prostoy",1000);
+	Product p2("Karandash","Prostoy",1000); // Добавление нового объекта p2 для конструктора "с параметрами"
 	cout << "\nDannie vtorogo producta: " << endl;
-	p2.print();
+	p2.print(); // Вызов метода print с объектом p2
 	cout << "\nDannie tretiego (copy) producta: " << endl;
-	Product p3 = p2;
-	p3.print();
+	Product p3 = p2; // Создание нового объекта p3 для конструктора "копирования" 
+	p3.print(); // Вызов метода print с объектом p3
 	return 0;
 }
