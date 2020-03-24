@@ -13,27 +13,27 @@ void Product::SetColor(string color_) {
 }
 
 bool Product::SetSize(int size_){
-    if (size_ < 0)
+    if (size_ < 0) // Условие для предотвращения ввода отрицательного числа
     return false;
     else
     size1 = size_;
     return true;
 }
 
-Product::Product() {
+Product::Product() { // Конструктор "без параметров"
 	name = "Skrepka";
 	color = "Chrom";
 	size1 = 200;
 }
 
-Product::Product(string _name, string _color, int _size) {
+Product::Product(string _name, string _color, int _size) { // Конструктор "с параметрами"
 	name = _name;
 	color = _color;
-	if (!SetSize(_size))
-    size1 = 0;
+	if (!SetSize(_size)) // Условие для предотвращения ввода отрицательного числа
+    size1 = 0; // Если будет введено отрицательно число, то на выводе будет показан ноль
 }
 
-Product::Product(const Product &p) {
+Product::Product(const Product &p) { // Конструктор "копирования"
 	name = p.name;
 	color = p.color;
 	size1 = p.size1;
